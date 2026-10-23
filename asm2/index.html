@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anh Phát - Gia dụng cao cấp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Anh Phát<span>.</span></a>
+
+        <nav aria-label="Điều hướng chính">
+            <ul class="nav-list">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="products.html">Sản phẩm</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li>
+                    <a href="cart.html">
+                        Giỏ hàng (<span id="cartcount">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ── HERO BANNER SLIDER (YÊU CẦU 8.1) ── -->
+    <section class="hero-banner" id="hero-slider">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <span class="hero-tag" id="slider-tag">🌿 BỘ SƯU TẬP BẾP MỘC 2026</span>
+                <h1>
+                    <span id="slider-title" style="color:var(--text);font-style:normal">Nâng tầm gian bếp,</span><br>
+                    <span id="slider-highlight">giữ lửa yêu thương</span>
+                </h1>
+                <p id="slider-desc">
+                    Khám phá các dòng nồi chảo inox 304, phụ kiện sứ cao cấp và thiết bị bếp thông minh.
+                </p>
+                <div class="hero-actions">
+                    <a href="products.html" class="btn-hero-primary">Mua sắm ngay →</a>
+                    <a href="#noi-bat" class="btn-hero-secondary">Xem nổi bật</a>
+                </div>
+                <div class="hero-stats">
+                    <div>
+                        <strong>100%</strong>
+                        <span>An toàn sức khỏe</span>
+                    </div>
+                    <div>
+                        <strong>Bảo hành</strong>
+                        <span>Chính hãng 24 tháng</span>
+                    </div>
+                    <div>
+                        <strong>Giao nhanh</strong>
+                        <span>Nội thành 2 giờ</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-image-wrapper">
+                <img
+                    id="slider-image"
+                    src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=80"
+                    alt="Không gian bếp hiện đại Anh Phát"
+                >
+                <div class="hero-floating-card">
+                    <span class="floating-icon" id="slider-float-icon">🎁</span>
+                    <div>
+                        <strong id="slider-float-title">Ưu đãi MYSHOP50</strong>
+                        <p id="slider-float-desc">Giảm 50.000đ mọi đơn hàng</p>
+                    </div>
+                </div>
+
+                <!-- Nút điều hướng Slider -->
+                <button type="button" class="slider-btn prev" id="slider-prev" aria-label="Slide trước">❮</button>
+                <button type="button" class="slider-btn next" id="slider-next" aria-label="Slide tiếp">❯</button>
+            </div>
+        </div>
+
+        <!-- Dấu chấm chuyển Slide -->
+        <div class="slider-dots" id="slider-dots"></div>
+    </section>
+
+    <main>
+        <!-- ── SECTION 1: Sản phẩm nổi bật ── -->
+        <section class="products" id="noi-bat">
+            <div class="section-heading">
+                <p class="eyebrow">ANH PHÁT · GIA DỤNG CHỌN LỌC</p>
+                <h1>Chăm chút gian bếp, <span>trọn vẹn yêu thương</span></h1>
+                <p class="section-description">
+                    Những sản phẩm tinh tế, đồng hành cùng mỗi bữa cơm gia đình.
+                </p>
+            </div>
+
+            <div class="section-label-bar">
+                <span class="section-badge featured">⭐ Sản phẩm nổi bật</span>
+            </div>
+
+            <div class="product-list" id="featured-list"></div>
+        </section>
+
+        <!-- ── SECTION 2: Bán chạy ── -->
+        <section class="products bestseller-section" id="ban-chay">
+            <div class="section-label-bar">
+                <span class="section-badge bestseller">🔥 Bán chạy nhất</span>
+            </div>
+
+            <div class="product-list" id="bestseller-list"></div>
+
+            <!-- Nút Xem tất cả -->
+            <div class="view-all-wrapper" id="view-all-wrapper"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Anh Phát. Tinh tế trong từng gian bếp.</p>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./auth.js"></script>
+</body>
+</html>
