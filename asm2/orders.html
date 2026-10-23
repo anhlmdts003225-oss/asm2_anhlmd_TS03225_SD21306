@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch sử đơn hàng - Anh Phát</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Anh Phát<span>.</span></a>
+        <nav aria-label="Điều hướng chính">
+            <ul class="nav-list">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="products.html">Sản phẩm</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="orders.html" class="active">Lịch sử đơn</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li>
+                    <a href="cart.html">
+                        Giỏ hàng (<span id="cartcount">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <div class="section-heading">
+                <p class="eyebrow">THEO DÕI ĐƠN MUA</p>
+                <h1>Lịch sử <span>đơn hàng</span></h1>
+                <p class="section-description">Xem chi tiết các đơn hàng bạn đã đặt tại Anh Phát.</p>
+            </div>
+
+            <div id="orders-history-list" class="orders-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Anh Phát. Tinh tế trong từng gian bếp.</p>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./auth.js"></script>
+    <script type="module" src="./orders.js"></script>
+</body>
+</html>

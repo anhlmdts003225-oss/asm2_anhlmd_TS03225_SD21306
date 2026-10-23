@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Anh Phát</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Anh Phát<span>.</span></a>
+
+        <nav aria-label="Điều hướng chính">
+            <ul class="nav-list">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="products.html">Sản phẩm</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="login.html" class="active">Đăng nhập</a></li>
+                <li>
+                    <a href="cart.html">
+                        Giỏ hàng (<span id="cartcount">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="form-card">
+                <!-- Thanh chuyển đổi Đăng nhập / Đăng ký -->
+                <div class="auth-tabs" id="auth-tabs">
+                    <button type="button" class="auth-tab active" data-target="login-panel">
+                        Đăng nhập
+                    </button>
+                    <button type="button" class="auth-tab" data-target="register-panel">
+                        Đăng ký
+                    </button>
+                </div>
+
+                <!-- ── KHUNG 1: FORM ĐĂNG NHẬP ── -->
+                <div id="login-panel" class="auth-panel">
+                    <div class="section-heading" style="margin-bottom: 24px;">
+                        <p class="eyebrow">CHÀO MỪNG TRỞ LẠI</p>
+                        <h1>Đăng nhập <span>tài khoản</span></h1>
+                        <p class="section-description">Đăng nhập để tiếp tục mua sắm tại Anh Phát.</p>
+                    </div>
+
+                    <form id="login-form" novalidate>
+                        <div class="form-group">
+                            <label for="login-email">Email *</label>
+                            <input type="email" id="login-email" placeholder="Nhập email của bạn">
+                            <span class="error-message" id="err-login-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="login-password">Mật khẩu *</label>
+                            <input type="password" id="login-password" placeholder="Nhập mật khẩu (6 - 32 ký tự)">
+                            <span class="error-message" id="err-login-password"></span>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Đăng nhập</button>
+                        <p class="form-success" id="login-success"></p>
+                        <p class="form-switch">
+                            Chưa có tài khoản?
+                            <a href="#" data-switch-tab="register-panel">Đăng ký ngay</a>
+                        </p>
+                    </form>
+                </div>
+
+                <!-- ── KHUNG 2: FORM ĐĂNG KÝ ── -->
+                <div id="register-panel" class="auth-panel hidden">
+                    <div class="section-heading" style="margin-bottom: 24px;">
+                        <p class="eyebrow">THÀNH VIÊN ANH PHÁT</p>
+                        <h1>Đăng ký <span>tài khoản</span></h1>
+                        <p class="section-description">Nhận ngay ưu đãi thành viên và theo dõi đơn hàng dễ dàng.</p>
+                    </div>
+
+                    <form id="register-form" novalidate>
+                        <div class="form-group">
+                            <label for="reg-fullname">Họ và tên *</label>
+                            <input type="text" id="reg-fullname" placeholder="Nhập họ và tên (3 - 50 ký tự)">
+                            <span class="error-message" id="err-reg-fullname"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-email">Email *</label>
+                            <input type="email" id="reg-email" placeholder="example@gmail.com">
+                            <span class="error-message" id="err-reg-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-phone">Số điện thoại *</label>
+                            <input type="tel" id="reg-phone" placeholder="09xxxxxxxx (10 chữ số)">
+                            <span class="error-message" id="err-reg-phone"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-password">Mật khẩu *</label>
+                            <input type="password" id="reg-password" placeholder="Tối thiểu 6 ký tự">
+                            <span class="error-message" id="err-reg-password"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reg-confirm">Xác nhận mật khẩu *</label>
+                            <input type="password" id="reg-confirm" placeholder="Nhập lại mật khẩu">
+                            <span class="error-message" id="err-reg-confirm"></span>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Đăng ký ngay</button>
+                        <p class="form-success" id="register-success"></p>
+                        <p class="form-switch">
+                            Đã có tài khoản?
+                            <a href="#" data-switch-tab="login-panel">Đăng nhập tại đây</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Anh Phát. Tinh tế trong từng gian bếp.</p>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./auth.js"></script>
+</body>
+</html>

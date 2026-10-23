@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - Anh Phát</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">Anh Phát<span>.</span></a>
+
+        <nav aria-label="Điều hướng chính">
+            <ul class="nav-list">
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="products.html">Sản phẩm</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li>
+                    <a href="cart.html">
+                        Giỏ hàng (<span id="cartcount">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products" id="san-pham">
+            <div class="section-heading">
+                <p class="eyebrow">ANH PHÁT · GIA DỤNG CHỌN LỌC</p>
+                <h1>Tất cả <span>sản phẩm</span></h1>
+                <p class="section-description">
+                    Tìm kiếm và lọc sản phẩm theo danh mục yêu thích.
+                </p>
+            </div>
+
+            <!-- Thanh lọc & tìm kiếm -->
+            <div class="filter-bar">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="🔍 Tìm kiếm sản phẩm..."
+                    aria-label="Tìm kiếm sản phẩm"
+                >
+                <select id="category-filter" aria-label="Lọc theo danh mục">
+                    <option value="">Tất cả danh mục</option>
+                </select>
+            </div>
+
+            <div class="product-list" id="product-list">
+                <!-- Sản phẩm được render bởi products-page.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Anh Phát. Tinh tế trong từng gian bếp.</p>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+    <script type="module" src="./auth.js"></script>
+</body>
+</html>
